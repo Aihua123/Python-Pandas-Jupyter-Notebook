@@ -2,7 +2,7 @@ import csv
 import os
 total_net_amount = 0
 
-csv_path = "UDEN201811DATA3/Week3/HW/Instructions/PyBank/Resources/budget_data.csv"
+csv_path = "../../../../Desktop/UDEN201811DATA3/Week3/HW/Instructions/PyBank/Resources/budget_data.csv"
 with open (csv_path,"r") as f:
     reader = csv.reader(f)
     next(reader)
