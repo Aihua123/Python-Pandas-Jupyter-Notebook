@@ -16,18 +16,23 @@ with open (csv_path,"r") as f:
         else:
             summary[candidate] = 1
 
-    print(f"Total Votes:",total_votes)
+    print("Election Results")
+    print("------------------------")
+    print(f"Total Votes: {total_votes}")
+    print("------------------------")
     # print(list(set(candidate_list)))
     # print(summary)
 
     x = 0
     for key,value in summary.items():
         pct_of_won = value/total_votes
-        print(key,"{:.2%}".format(pct_of_won),value)
+        pct_of_won_formatted = "{:.3%}".format(pct_of_won)
+        print(f"{key}: {pct_of_won_formatted} ({value})")
         if pct_of_won > x:
            x = pct_of_won
            winner = key
-    print(f"winner:",winner)       
+    print("------------------------")
+    print(f"winner:{winner}")       
     
 
 
