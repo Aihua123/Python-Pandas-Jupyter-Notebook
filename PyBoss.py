@@ -71,6 +71,6 @@ with open(csv_path,"r")as f:
         new_data.append([emp_id,first_name,last_name,dob_formatted,ssn_formatted,abbrev_state])
         
 with open('new_employee_data.csv', 'w') as f:
-    writer = csv.writer(f)
+    writer = csv.writer(f,lineterminator="\n")
     for _row in new_data:
         writer.writerow(_row)
